@@ -8,7 +8,10 @@ import gr.dimitriskiriakakis.bidmax.entity.IntroUser;
 import gr.dimitriskiriakakis.bidmax.service.IntroUserService;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.mobile.device.Device;
+import org.springframework.mobile.device.site.SitePreference;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,13 +19,23 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+
+
 @Controller
 @RequestMapping("/intro")
 public class RegisterIntroController {
 	
 	@RequestMapping
-	public String index(){
-		return "intro";
+	public String index(SitePreference sitePreference, Device device, Model model){
+		
+		if (device.isNormal()) {
+			return "intro";
+        } else if (device.isMobile()) {
+        	return "intromobile";
+        } else  {
+        	return "intro";
+        }
+		
 	}
 	
 	

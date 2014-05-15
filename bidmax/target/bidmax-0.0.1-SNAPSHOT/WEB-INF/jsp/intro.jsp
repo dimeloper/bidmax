@@ -4,13 +4,29 @@
 <%@ include file="../layout/taglib.jsp"%>
 
 <!DOCTYPE html>
-<html>
+<html prefix="og: http://ogp.me/ns#" xmlns:og="http://opengraphprotocol.org/schema/" xmlns:fb="http://developers.facebook.com/schema/">
 
 <head>
 
 <meta http-equiv="Content-Type"
 	content="text/html; 
               charset=utf-8">
+              <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta charset="UTF-8">
+	<meta name="description" content="Πούλησε ή αγόρασε 
+									προϊόντα & υπηρεσίες πιο εύκολα & πιο γρήγορα από ποτέ 
+									ξοδεύοντας ελάχιστα. Έλα τώρα στην πληρέστερη πλατφόρμα 
+ 									αγοραπωλησιών στην Ελλάδα! ">
+	<meta name="keywords" content="bidmax,bidmax.gr,Δημοπρασίες,Αγοραπωλησίες">
+	<meta name="author" content="Kiriakakis Dimitris">
+	<meta property="og:url" content="http://www.bidmax.gr/"/>
+	<meta property="og:title" content="bidmax.gr - #coming_soon" />
+	<meta property="og:description" content="Πούλησε ή αγόρασε 
+									προϊόντα & υπηρεσίες πιο εύκολα & πιο γρήγορα από ποτέ 
+									ξοδεύοντας ελάχιστα. Έλα τώρα στην πληρέστερη πλατφόρμα 
+ 									αγοραπωλησιών στην Ελλάδα!" />
+ 									<meta property="og:image" content="http://www.bidmax.gr/resources/img/intro/eCommerce.png"/>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>BidMax - Καλώς Ήρθατε!</title>
 
 <!-- JQuery -->
@@ -54,31 +70,40 @@
 				});
 	});
 </script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-50835577-1', 'bidmax.gr');
+  ga('send', 'pageview');
+
+</script>
 
 
 
 </head>
 <body>
-	<div class="navbar navbar-default navbar-fixed-top" role="navigation">
-		<div class="container">
-			<div class="navbar-header">
+	<div class="navbar navbar-default navbar-fixed-top"  style="background-color:#fff;height:60px;" role="navigation" >
+		<div class="container"> 
+			<div class="navbar-header" >
 				<button type="button" class="navbar-toggle" data-toggle="collapse"
 					data-target=".navbar-collapse">
 					<span class="sr-only">Toggle navigation</span> <span
 						class="icon-bar"></span> <span class="icon-bar"></span> <span
 						class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="#"><span id="bidmaxword1">bid</span><span
-					id="bidmaxword2">max</span><span id="bidmaxword3"
-					style="font-size: 12px;">.gr</span></a>
+				<a class="navbar-brand" href="#" style="padding:0px;"><img src="<c:url value="/resources/img/bidmaxhome.png" />"
+									style="height: 58px;padding:0px;"></a>
 			</div>
-			<div class="navbar-collapse collapse">
+			<div class="navbar-collapse collapse" style="background-color:#fff;">
 				<ul class="nav navbar-nav">
 
 
 
 				</ul>
-				<ul class="nav navbar-nav navbar-right">
+				<ul class="nav navbar-nav navbar-right" style="padding-top:5px;">
 					<li class="dropdown"><a href="#" class="dropdown-toggle"
 						data-toggle="dropdown">#coming_soon <b class="caret"></b></a>
 						<ul class="dropdown-menu">
@@ -91,7 +116,34 @@
 							<li><a href="#vision">Όραμα</a></li>
 
 						</ul></li>
-					<li><button class="greensubmit" data-toggle="modal"
+					
+							<li><table border="0" cellpadding="0" cellspacing="0" width="100%"
+							style="max-width: 250px;">
+							<tr>
+								<td height="50" width="20%" align="center"><a href='https://twitter.com/Bidmax_gr'
+									title='Find Us on Twitter' target="_blank">
+										<div class="twitter-hover social-slide"></div>
+								</a></td>
+								<td height="50" width="20%" align="center"><a href='https://www.facebook.com/pages/Bidmaxgr/629960683765689'
+									title='Find Us on Facebook' target="_blank">
+										<div class="facebook-hover social-slide"></div>
+								</a></td>
+								<td height="50" width="20%" align="center"><a href='https://plus.google.com/117180671031135484734/posts'
+									title='Find Us on Google+' target="_blank">
+										<div class="google-hover social-slide"></div>
+								</a></td>
+								<td height="50" width="20%" align="center"><a href='https://www.youtube.com/channel/UCw2pHA60Ri8OO2PztjUKinQ'
+									title='Find Us on Youtube' target="_blank">
+										<div class="youtube-hover social-slide"></div>
+								</a></td>
+								<td height="50" width="20%" align="center"><a href='http://gr.pinterest.com/bidmaxgr/'
+									title='Find Us on Pinterest' target="_blank">
+										<div class="pinterest-hover social-slide"></div>
+								</a></td>
+							</tr>
+						</table>
+							</li>
+							<li><button class="greensubmit" data-toggle="modal"
 							data-target="#myModal">Εγγραφή τώρα!</button></li>
 
 				</ul>
@@ -187,11 +239,16 @@
 		
 	</div>
 	<div id="mainpageintro" style="margin-top: 50px;">
-		<table border="0" cellpadding="0" cellspacing="0" width="99%">
+		<table border="0" cellpadding="0" cellspacing="0" width="100%">
 			<tr>
 
 				<td width="100%" style="vertical-align: top;" align="center">
-
+				<div style="background-color:#fff;width=100%;padding-top:5px;box-shadow: 0 1px 1px rgba(0,0,0,.4) inset, 0 1px 0 rgba(255,255,255,.2);
+    -moz-box-shadow: 0 0 5px #000;
+    -webkit-box-shadow: 0 0 5px#000;
+    box-shadow: 0 0 7px #000;">
+					<img src="<c:url value="/resources/img/intro/eCommerce.png" />"
+									style="max-height: 600px;"></div>
 					<div id="maincontentintro">
 						<c:if test="${param.success eq true }">
 							<div class="alert alert-success">Η εγγραφή σας
@@ -200,56 +257,55 @@
 						<c:if test="${param.error eq true }">
 							<div class="alert alert-info">Υπήρξε σφάλμα στην εγγραφή σας! Παρακαλώ ξαναδοκιμάστε!</div>
 						</c:if>
-						<table border="0" cellpadding="0" cellspacing="0" width="100%">
-							<tr>
-								<td align="center"
-									style="background-color: #fff; border-top-left-radius: 5px; border-bottom: 2px solid #903b31;">
-									<img src="<c:url value="/resources/img/intro/eCommerce.png" />"
-									style="max-height: 400px;">
-								</td>
-								<td align="right"
-									style="background-color: #eee; border-top-right-radius: 5px; border-bottom: 2px solid #903b31;">
+<!-- 						<table border="0" cellpadding="0" cellspacing="0" width="100%"> -->
+<!-- 							<tr> -->
+<!-- 								<td align="center" -->
+<!-- 									style="background-color: #fff; border-top-left-radius: 5px; border-bottom: 2px solid #903b31;"> -->
+									
+<!-- 								</td> -->
+<!-- 								<td align="right" -->
+<!-- 									style="background-color: #eee; border-top-right-radius: 5px; border-bottom: 2px solid #903b31;"> -->
 
 
 
-								</td>
-							</tr>
-						</table>
-						<table border="0" cellpadding="0" cellspacing="0" width="100%"
-							style="background-color: #eee;">
+<!-- 								</td> -->
+<!-- 							</tr> -->
+<!-- 						</table> -->
+<!-- 						<table border="0" cellpadding="0" cellspacing="0" width="100%" -->
+<!-- 							style="background-color: #eee;"> -->
 
-							<tr>
-								<td height="50" width="10%" align="center"></td>
-								<td height="100" width="80%" align="left"
-									style='font-size: 26px; color: #903b31;'><b>Ανακάλυψε
-										ένα νέο online κόσμο αγοραπωλησιών.</b></td>
+<!-- 							<tr> -->
+<!-- 								<td height="50" width="10%" align="center"></td> -->
+<!-- 								<td height="100" width="80%" align="left" -->
+<!-- 									style='font-size: 26px; color: #903b31;'><b>Ανακάλυψε -->
+<!-- 										ένα νέο online κόσμο αγοραπωλησιών.</b></td> -->
 
-								<td height="50" width="10%" align="center"></td>
+<!-- 								<td height="50" width="10%" align="center"></td> -->
 
-							</tr>
-							<tr>
-								<td height="50" width="10%" align="center"></td>
-								<td height="50" width="80%" align="left"
-									style='font-size: 20px; color: #903b31;'>Πούλησε ή αγόρασε
-									προϊόντα & υπηρεσίες πιο εύκολα & πιο γρήγορα από ποτέ
-									ξοδεύοντας ελάχιστα. Έλα τώρα στην πληρέστερη πλατφόρμα
-									αγοραπωλησιών στην Ελλάδα!</td>
+<!-- 							</tr> -->
+<!-- 							<tr> -->
+<!-- 								<td height="50" width="10%" align="center"></td> -->
+<!-- 								<td height="50" width="80%" align="left" -->
+<!-- 									style='font-size: 20px; color: #903b31;'>Πούλησε ή αγόρασε -->
+<!-- 									προϊόντα & υπηρεσίες πιο εύκολα & πιο γρήγορα από ποτέ -->
+<!-- 									ξοδεύοντας ελάχιστα. Έλα τώρα στην πληρέστερη πλατφόρμα -->
+<!-- 									αγοραπωλησιών στην Ελλάδα!</td> -->
 
-								<td height="50" width="10%" align="center"></td>
+<!-- 								<td height="50" width="10%" align="center"></td> -->
 
-							</tr>
-							<tr>
-								<td height="50" width="10%" align="center"></td>
-								<td height="50" width="80%" align="left"
-									style='font-size: 20px; color: #903b31;'></td>
+<!-- 							</tr> -->
+<!-- 							<tr> -->
+<!-- 								<td height="50" width="10%" align="center"></td> -->
+<!-- 								<td height="50" width="80%" align="left" -->
+<!-- 									style='font-size: 20px; color: #903b31;'></td> -->
 
-								<td height="50" width="10%" align="center"></td>
+<!-- 								<td height="50" width="10%" align="center"></td> -->
 
-							</tr>
-						</table>
+<!-- 							</tr> -->
+<!-- 						</table> -->
 
 						<div id='billingdetails'
-							style="border-top: 2px solid #903b31; border-bottom: 2px solid #903b31;">
+							style="margin-top: 0px; border-bottom: 2px solid #903b31;">
 							<table border="0" cellpadding="0" cellspacing="0" width="95%">
 								<tr>
 									<td height="320" width="60%" align="center"
@@ -304,7 +360,7 @@
 							<tr>
 								<td height="50" width="10%" align="center"></td>
 								<td height="100" width="80%" align="left"
-									style='font-size: 26px; color: #903b31;'><b>Δημιουργία.</b>
+									style='font-size: 34px; color: #903b31;'><b>Δημιουργία.</b>
 								</td>
 
 								<td height="50" width="10%" align="center"></td>
@@ -315,7 +371,9 @@
 								<td height="50" width="80%" align="left"
 									style='font-size: 20px; color: #903b31;'>Διαμόρφωσε τη
 									δική σου στρατηγική για να πετύχεις & εκμεταλλεύσου στο έπακρο
-									τα όπλα που σου δίνει η πλατφόρμα του . Χτίσε το προφίλ σου,
+									τα όπλα που σου δίνει η πλατφόρμα του <span
+												id="bidmaxword1">bid</span><span id="bidmaxword2">max</span><span
+												id="bidmaxword3" style="font-size: 12px;">.gr</span>. Χτίσε το προφίλ σου,
 									διαχειρίσου τις παραγγελίες σου, ανανέωσε τα προϊόντα σου, βρες
 									νέους πελάτες και.. αύξησε ραγδαία τα κέρδη σου!</td>
 
@@ -421,7 +479,7 @@
 							<tr>
 								<td height="50" width="10%" align="center"></td>
 								<td height="100" width="80%" align="left"
-									style='font-size: 26px; color: #903b31;'><b>Καινοτομία.</b>
+									style='font-size: 34px; color: #903b31;'><b>Καινοτομία.</b>
 								</td>
 
 								<td height="50" width="10%" align="center"></td>
@@ -477,8 +535,8 @@
 														</td>
 														<td width="1%" align="center"></td>
 														<td width="74%" align="left"
-															style="color: #000; font-size: 15px;">Εισαγωγή
-															feedback (από ebay.com, ricardo.gr & etsy.com)</td>
+															style="color: #000; font-size: 15px;"><b>Εισαγωγή
+															feedback</b> (από ebay.com, ricardo.gr & etsy.com)</td>
 													</tr>
 												</table> <br>
 												<table width="100%">
@@ -568,7 +626,7 @@
 							<tr>
 								<td height="50" width="10%" align="center"></td>
 								<td height="100" width="80%" align="left"
-									style='font-size: 26px; color: #903b31;'><b>Εμπιστοσύνη.</b>
+									style='font-size: 34px; color: #903b31;'><b>Εμπιστοσύνη.</b>
 								</td>
 
 								<td height="50" width="10%" align="center"></td>
@@ -793,7 +851,7 @@
 							<tr>
 								<td height="50" width="10%" align="center"></td>
 								<td height="100" width="80%" align="left"
-									style='font-size: 26px; color: #903b31;'><b>Όραμα.</b></td>
+									style='font-size: 34px; color: #903b31;'><b>Όραμα.</b></td>
 
 								<td height="50" width="10%" align="center"></td>
 
@@ -886,7 +944,7 @@
 										</tr>
 										<tr>
 											<td width="100%" height="30" align="center"
-												style="color: #000; font-size: 15px;"><b>Να γίνει
+												style="color: #000; font-size: 20px;"><b>Να γίνει
 													το πάθος μας, η συνήθειά σας!</b></td>
 
 										</tr>
@@ -933,36 +991,12 @@
 			<table border="0" cellpadding="0" cellspacing="0" width="100%">
 				<tr>
 					<td height="50" width="25%" align="right">
-						<table border="0" cellpadding="0" cellspacing="0" width="100%"
-							style="max-width: 250px;">
-							<tr>
-								<td height="50" width="20%" align="center"><a href='//'
-									title='Find Us on Twitter'>
-										<div class="twitter-hover social-slide"></div>
-								</a></td>
-								<td height="50" width="20%" align="center"><a href='//'
-									title='Find Us on Facebook'>
-										<div class="facebook-hover social-slide"></div>
-								</a></td>
-								<td height="50" width="20%" align="center"><a href='//'
-									title='Find Us on Google+'>
-										<div class="google-hover social-slide"></div>
-								</a></td>
-								<td height="50" width="20%" align="center"><a href='//'
-									title='Find Us on Youtube'>
-										<div class="youtube-hover social-slide"></div>
-								</a></td>
-								<td height="50" width="20%" align="center"><a href='//'
-									title='Find Us on Pinterest'>
-										<div class="pinterest-hover social-slide"></div>
-								</a></td>
-							</tr>
-						</table>
+						
 					</td>
 					<td height="50" width="20%" align="right"><img
 						src="<c:url value="/resources/img/blacklogo.jpg" />" height="44">
 					</td>
-					<td height="50" width="55%" align="left">Copyright &copy; 2013
+					<td height="50" width="55%" align="left">Copyright &copy; 2014
 						by bidmax.gr - All rights reserved</td>
 
 

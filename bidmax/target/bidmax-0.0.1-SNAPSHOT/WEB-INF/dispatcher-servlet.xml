@@ -8,7 +8,12 @@
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd">
 
 
-<mvc:annotation-driven />
+<mvc:annotation-driven>
+        <mvc:argument-resolvers>
+            <bean class="org.springframework.mobile.device.site.SitePreferenceWebArgumentResolver" />           
+            <bean class="org.springframework.mobile.device.DeviceWebArgumentResolver" />
+        </mvc:argument-resolvers>
+    </mvc:annotation-driven>
 <mvc:resources mapping="/resources/**" location="/resources/" />
 
 <context:component-scan base-package="gr.dimitriskiriakakis.bidmax.controller"/>
@@ -26,4 +31,21 @@
     <property name="viewClass" value="org.springframework.web.servlet.view.tiles3.TilesView"/>
 </bean>
 
+
+
+    
+    <mvc:interceptors>
+        <!-- Resolve the device which has generated the request -->
+        <bean class="org.springframework.mobile.device.DeviceResolverHandlerInterceptor" />
+     
+        <!-- User's site preference -->
+        <bean class="org.springframework.mobile.device.site.SitePreferenceHandlerInterceptor" />
+     
+        
+    </mvc:interceptors>
+     
+    
+
 </beans>
+
+

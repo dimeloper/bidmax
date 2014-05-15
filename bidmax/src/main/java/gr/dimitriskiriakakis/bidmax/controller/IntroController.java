@@ -12,6 +12,11 @@ public class IntroController {
 		return "redirect:/intro.html";
 	}
 	
+	@RequestMapping("/googlefe4cb50101544164")
+	public String confirm(){
+		return "confirmgoogle";
+	}
+	
 	
 
 }

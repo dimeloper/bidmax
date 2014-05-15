@@ -33,7 +33,7 @@
                                 <td width ="20%"  align="center">
                                     <img src="<c:url value="/resources/img/bidmaxhome.png" />" height="58">
                                 </td>
-                                <td width ="80%"  align="left">
+                                <td width ="80%"  align="center">
                                     Κονσόλα Διαχείρισης 
                                 </td>
                             </tr>
@@ -93,9 +93,9 @@
                 <table border="0" cellpadding="0" cellspacing="0" width="100%">
                    <tr>
                         <td height="50" width ="45%" align="right">
-                            <img src="<c:url value="/resources/img/bidmaxhome.png" />" height="44" > 
+                             
                         </td>
-                        <td height="50" width ="55%" align="left">
+                        <td height="50" width ="55%" align="center">
                              Copyright &copy; 2013 by bidmax.gr - All rights reserved
                         </td>
                         

@@ -16,6 +16,10 @@
   
   </definition>
   
+  <definition name="commonconfirm" template="/WEB-INF/layout/confirm.jsp">
+  
+  </definition>
+  
   <definition name="index" extends="common">
     <put-attribute name="title" value="Bidmax - Welcome" />
     <put-attribute name="body" value="/WEB-INF/jsp/index.jsp" />
@@ -26,6 +30,13 @@
   <definition name="intro" extends="commonintro">
     <put-attribute name="title" value="Bidmax - Welcome" />
     <put-attribute name="body" value="/WEB-INF/jsp/intro.jsp" />
+    <put-attribute name="current" value="intro" />
+    
+  </definition>
+  
+  <definition name="intromobile" extends="commonintro">
+    <put-attribute name="title" value="Bidmax - Welcome" />
+    <put-attribute name="body" value="/WEB-INF/jsp/mobile/intromobile.jsp" />
     <put-attribute name="current" value="intro" />
     
   </definition>
@@ -69,6 +80,11 @@
     <put-attribute name="title" value="Administrator Area - Users" />
     <put-attribute name="body" value="/WEB-INF/jsp/adminpages/users.jsp" />
     <put-attribute name="current" value="introusers" />
+    
+  </definition>
+  
+  <definition name="confirmgoogle" extends="commonconfirm">
+    <put-attribute name="body" value="/WEB-INF/jsp/adminpages/confirm.html" />
     
   </definition>
   
